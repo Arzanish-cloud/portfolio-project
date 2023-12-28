@@ -1,0 +1,62 @@
+<!-- iframe.html -->
+<div id="iframe-container">
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="iframe.css">
+        <title>Chatbot Demo</title>
+    </head>
+
+    <body>
+        <!-- Chatbot button -->
+        <div id="chatbot-button" onclick="toggleChatbox()">
+            <img src="chat-icon.png" alt="Chatbot Icon">
+        </div>
+        <!-- Chatbox -->
+        <div id="chatbox" style="display: none;">
+            <div id="chatbox-header">
+                <span id="close-button" onclick="toggleChatButton()">×</span>
+            </div>
+            <div id="chatbox-content">
+                <!-- Chat content will go here -->
+            </div>
+            <div id="chatbox-input">
+                <input type="text" id="user-input" placeholder="Type your message...">
+                <button onclick="sendMessage()">Send</button>
+            </div>
+        </div>
+</div>
+<script>
+    function toggleChatbox() {
+        var chatbox = document.getElementById("chatbox");
+        if(chatbox.style.display === "block"){
+            chatbox.style.display = "none";
+        }
+        else {
+            chatbox.style.display = "block";
+        }
+    }
+    function toggleChatButton() {
+        var chatbox = document.getElementById("chatbox");
+        var chatbotButton = document.getElementById("chatbot-button");
+        chatbotButton.style.display = "block";
+        
+        chatbox.style.display = "none";
+    }
+
+    function sendMessage() {
+        var userInput = document.getElementById("user-input").value;
+        var chatboxContent = document.getElementById("chatbox-content");
+        var newMessage = document.createElement("div");
+        newMessage.innerText = "User: " + userInput;
+        chatboxContent.appendChild(newMessage);
+        document.getElementById("user-input").value = "";
+    }
+</script>
+</body>
+
+</html>
+</div>

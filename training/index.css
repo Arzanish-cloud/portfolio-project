@@ -1,0 +1,33 @@
+body{
+    background-color: #121212;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+#rounded{
+    border-radius: 20px;
+}
+#style_box{
+    border-radius: 20px;
+    background-color: #282829;
+}
+#centeredDiv {
+    margin-top: 15px;
+    border-radius: 10px;
+    height: 25px;
+    width: 80%;
+    background-color: #383838;
+    color: white;
+    text-align: center;
+    line-height: 25px;
+    font-size: small;
+}
+#parentDiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
